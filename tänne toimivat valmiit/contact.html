@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ota yhteyttä – Jätteeks Jääny</title>
+  <meta name="description" content="Ota yhteyttä Jätteeks Jääny -noutopalveluun. Nopea vastaus, ystävällinen palvelu. WhatsApp-nappi ja yhteydenottolomake." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --dark:#2E4D34; --light:#81C784; --ink:#1E1E1E; --paper:#F4F1ED; }
+    .brand-gradient { background: linear-gradient(135deg,var(--dark),#3b7f4b,var(--light)); }
+    .glass { backdrop-filter: blur(10px) saturate(1.1); background: rgba(255,255,255,.85); }
+    a.link { text-decoration: underline; }
+  </style>
+</head>
+<body class="bg-[var(--paper)] text-[var(--ink)]">
+  <!-- HEADER -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-3">
+        <img src="logo-jj.jpg" alt="Jätteeks Jääny logo" class="h-12 w-auto object-cover rounded-lg" />
+        <span class="font-bold text-xl text-[var(--dark)]">Jätteeks Jääny</span>
+      </div>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="hover:underline">Etusivu</a>
+        <a href="about.html" class="hover:underline">Meistä</a>
+        <a href="contact.html" class="underline font-semibold text-[var(--dark)]">Ota yhteyttä</a>
+        <a href="privacy.html" class="hover:underline">Tietosuoja</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <img src="kuva12.jpg" class="absolute inset-0 w-full h-full object-cover opacity-70" alt="Työkuva Jätteeks Jääny" />
+    <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center glass rounded-2xl shadow-xl mt-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Ota yhteyttä</h1>
+      <p class="mt-3 text-lg">Nopea vastaus – yleensä saman päivän aikana. Ystävällinen, paikallinen nouto Oulussa ja lähialueilla.</p>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+    <!-- Left: CTA + tiedot -->
+    <section>
+      <div class="brand-gradient text-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-2xl font-bold">Nopein tapa: WhatsApp</h2>
+        <p class="mt-2 opacity-95">Laita kuva tavaroista ja kerro alue (esim. Martinniemi / Oulu), niin annan arvion ja vapaat ajat.</p>
+        <a id="wa-btn" href="#" class="inline-flex items-center justify-center mt-5 px-6 py-3 rounded-lg font-semibold bg-white text-[var(--dark)] shadow hover:opacity-90">
+          Avaa WhatsApp →
+        </a>
+        <p class="mt-3 text-sm opacity-90">Vinkki: jos WhatsApp ei avaudu, voit kopioida numeron: <span id="wa-number-copy" class="font-mono underline cursor-pointer"></span></p>
+      </div>
+
+      <div class="mt-8 bg-white rounded-2xl shadow p-6">
+        <h3 class="text-xl font-bold">Yhteystiedot</h3>
+        <ul class="mt-4 space-y-2">
+          <li>Yrittäjä: <strong>Matti "Ville" Niinimaa</strong></li>
+          <li>Alue: Oulu – Martinniemi & lähialueet</li>
+          <li>WhatsApp / puh: <a id="wa-tel" class="link" href="#"></a></li>
+          <li>Sähköposti: <a class="link" href="mailto:ville.niinimaaa@gmail.com">ville.niinimaaa@gmail.com</a></li>
+          <li>Arviot & palaute: <a href="https://g.page/r/CdYVARXb9dxsEBI/review" class="link" target="_blank" rel="noopener">Jätä Google‑arvostelu</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Right: Lomake (Formsubmit) -->
+    <section>
+      <form id="contact-form"
+            action="https://formsubmit.co/ville.niinimaaa@gmail.com"
+            method="POST"
+            class="bg-white rounded-2xl shadow p-6 grid gap-4">
+        <input type="hidden" name="_subject" value="Uusi yhteydenotto: Jätteeks Jääny">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <h3 class="text-xl font-bold">Yhteydenottolomake</h3>
+        <p class="text-sm text-gray-600">Täytä kentät niin palaan sinulle pian. Voit myös käyttää WhatsAppia yllä.</p>
+
+        <label class="grid gap-1">
+          <span class="text-sm font-medium">Nimi</span>
+          <input required type="text" name="name" placeholder="Etunimi ja sukunimi" class="px-4 py-3 rounded-lg border" />
+        </label>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Sähköposti</span>
+            <input required type="email" name="email" placeholder="esim. nimi@posti.fi" class="px-4 py-3 rounded-lg border" />
+          </label>
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Puhelin (valinnainen)</span>
+            <input type="tel" name="phone" placeholder="esim. 0401234567" class="px-4 py-3 rounded-lg border" />
+          </label>
+        </div>
+
+        <label class="grid gap-1">
+          <span class="text-sm font-medium">Viesti</span>
+          <textarea required name="message" rows="5" placeholder="Kuvaile noudettavat tavarat, kerro osoite/alue ja toivotut ajat" class="px-4 py-3 rounded-lg border"></textarea>
+        </label>
+
+        <fieldset class="text-sm bg-white/70 rounded-lg border px-4 py-3">
+          <legend class="font-semibold px-1">Suostumus tietojen käsittelyyn</legend>
+          <p class="text-gray-600 mb-2">Hyväksyn, että yhteydenottoni tiedot käsitellään ja minuun ollaan yhteydessä <a href="privacy.html" class="link">tietosuojaselosteen</a> mukaisesti.</p>
+          <label class="inline-flex items-center mr-4 gap-2">
+            <input type="radio" name="consent" value="Kyllä" required>
+            <span>Kyllä</span>
+          </label>
+          <label class="inline-flex items-center gap-2">
+            <input type="radio" name="consent" value="Ei">
+            <span>Ei</span>
+          </label>
+        </fieldset>
+
+        <button class="brand-gradient text-white px-6 py-3 rounded-lg font-semibold shadow">Lähetä viesti →</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--dark)] text-white py-6">
+    <div class="max-w-6xl mx-auto flex justify-between px-6">
+      <span>© <span id="year"></span> Jätteeks Jääny – Oulu</span>
+      <nav class="space-x-4">
+        <a href="privacy.html" class="link">Tietosuoja</a>
+        <a href="contact.html" class="link">Ota yhteyttä</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const WA_NUMBER = "358442309006";
+    const WA_TEXT = encodeURIComponent("Hei Ville! Tarvitsisin noudon (alue: ____). Tavarat: ____. Milloin onnistuu?");
+    const waLink = `https://wa.me/${WA_NUMBER}?text=${WA_TEXT}`;
+
+    const waBtn = document.getElementById('wa-btn');
+    const waCopy = document.getElementById('wa-number-copy');
+    const waTel = document.getElementById('wa-tel');
+
+    waBtn.href = waLink;
+    if (waCopy) {
+      waCopy.textContent = `+${WA_NUMBER}`;
+      waCopy.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText('+' + WA_NUMBER); waCopy.textContent = 'Kopioitu!'; setTimeout(()=> waCopy.textContent = `+${WA_NUMBER}`, 1500);} catch(_){}
+      });
+    }
+    if (waTel) {
+      waTel.href = `tel:+${WA_NUMBER}`;
+      waTel.textContent = `+${WA_NUMBER}`;
+    }
+  </script>
+</body>
+</html>
